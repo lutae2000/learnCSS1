@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    font-family: 'Source San Pro';
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #263343;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.navbar_logo, .navbar_link{
+    color:wheat;
+    font-size: 20px;
+}
+
+.navbar_menu li:hover{
+    color:red;
+    background-color: orange;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li{
+    padding: 8px 12px;
+}
+
+.navbar_link{
+    display: flex;
+    list-style: none;
+}
+
+.navbar_link li{
+    padding: 8px 8px;
+    padding-left: 0;
+}
+
+.toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar_menu{
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_link{
+        justify-content: center;
+        display:none;
+        padding-left: 0;
+    }
+
+    .toggleBtn {
+        display:block;
+    }
+
+    .navbar_menu.active,
+    .navbar_link.active{
+        display: flex;
+    }
+    
+}
